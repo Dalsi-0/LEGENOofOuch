@@ -461,7 +461,7 @@ GameObject:
   - component: {fileID: 159895215}
   - component: {fileID: 159895214}
   m_Layer: 5
-  m_Name: Image
+  m_Name: StageImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -975,7 +975,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 107.415955, y: -45.6239}
+  m_AnchoredPosition: {x: 107.415955, y: -67.026}
   m_SizeDelta: {x: 78.5433, y: 72.7314}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &413923995
@@ -1044,7 +1044,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1717186904}
-        m_TargetAssemblyTypeName: StageManager, Assembly-CSharp
+        m_TargetAssemblyTypeName: TileMapManager, Assembly-CSharp
         m_MethodName: NextStage
         m_Mode: 1
         m_Arguments:
@@ -1130,7 +1130,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -2.4899, y: -80.396}
+  m_AnchoredPosition: {x: -2.4899, y: -127}
   m_SizeDelta: {x: 101.2978, y: 25.208}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &505185502
@@ -1239,7 +1239,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59301aacb20c0f24b9152bdf9ba3d0aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pannel: {fileID: 505185500}
+  pannel: {fileID: 831588256}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1417,7 +1417,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: ccafd49b57f5d024582452ad56012ea1, type: 3}
-    m_FontSize: 60
+    m_FontSize: 20
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -1428,7 +1428,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 3
+  m_Text: 
 --- !u!222 &542675219
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1484,7 +1484,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1054294713}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &585097804
@@ -2049,7 +2050,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -117.584045, y: -45.6239}
+  m_AnchoredPosition: {x: -120, y: -67.026}
   m_SizeDelta: {x: 78.5433, y: 72.731}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &834153230
@@ -2097,7 +2098,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1717186904}
-        m_TargetAssemblyTypeName: StageManager, Assembly-CSharp
+        m_TargetAssemblyTypeName: TileMapManager, Assembly-CSharp
         m_MethodName: PreviousStage
         m_Mode: 1
         m_Arguments:
@@ -2621,8 +2622,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -59}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: 0, y: 59}
+  m_SizeDelta: {x: 142.1116, y: 55.4821}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1038571449
 MonoBehaviour:
@@ -2741,6 +2742,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1045864456}
   m_CullTransparentMesh: 1
+--- !u!1 &1054294712
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1054294713}
+  m_Layer: 0
+  m_Name: GameStage
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1054294713
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1054294712}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 565753156}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1059531945
 GameObject:
   m_ObjectHideFlags: 0
@@ -3382,13 +3414,13 @@ MonoBehaviour:
   StageImage: {fileID: 1540192422}
   StageName: {fileID: 1973820541}
   StageImages:
-  - {fileID: 21300000, guid: 363f6850a563f954597e957c33f4ce6e, type: 3}
-  - {fileID: 21300000, guid: 58c9f3e3f33dd9241bd91730bab7c255, type: 3}
-  - {fileID: 21300000, guid: 5fa546654f083454797948c72a304e42, type: 3}
+  - {fileID: 21300000, guid: c01a92d8d76b11448aebf8b17b20f6a4, type: 3}
+  - {fileID: 21300000, guid: 3646236f16bdb264d87d3fe0aaf122e5, type: 3}
+  - {fileID: 21300000, guid: d8c9fb7f0caa3474b8e43f11a3329509, type: 3}
   StageNames:
-  - map1
-  - map2
-  - map3
+  - Castle
+  - Swamp
+  - 2
 --- !u!1 &1354139989
 GameObject:
   m_ObjectHideFlags: 0
@@ -4449,7 +4481,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1717186903
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4482,17 +4514,53 @@ MonoBehaviour:
   m_GameObject: {fileID: 1717186902}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc3a4f347a6df944d9f541485c5d9851, type: 3}
+  m_Script: {fileID: 11500000, guid: 852aa5dfb098f5e4ab84a1e309388fd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StageImage: {fileID: 1038571449}
-  StageName: {fileID: 542675218}
-  StageImages:
-  - {fileID: 21300000, guid: a55e5be98b055174ea4428ffbad07584, type: 3}
-  - {fileID: 21300000, guid: 5ea81f26f5a214a4abbcddb231079866, type: 3}
-  StageNames:
-  - 1
-  - 2
+  SelectImage: {fileID: 159895214}
+  SelectName: {fileID: 542675218}
+  SelectImages:
+  - {fileID: 21300000, guid: c01a92d8d76b11448aebf8b17b20f6a4, type: 3}
+  - {fileID: 21300000, guid: c01a92d8d76b11448aebf8b17b20f6a4, type: 3}
+  - {fileID: 21300000, guid: c01a92d8d76b11448aebf8b17b20f6a4, type: 3}
+  - {fileID: 21300000, guid: c01a92d8d76b11448aebf8b17b20f6a4, type: 3}
+  - {fileID: 21300000, guid: 3646236f16bdb264d87d3fe0aaf122e5, type: 3}
+  - {fileID: 21300000, guid: 3646236f16bdb264d87d3fe0aaf122e5, type: 3}
+  - {fileID: 21300000, guid: 3646236f16bdb264d87d3fe0aaf122e5, type: 3}
+  - {fileID: 21300000, guid: 3646236f16bdb264d87d3fe0aaf122e5, type: 3}
+  - {fileID: 21300000, guid: d8c9fb7f0caa3474b8e43f11a3329509, type: 3}
+  - {fileID: 21300000, guid: d8c9fb7f0caa3474b8e43f11a3329509, type: 3}
+  - {fileID: 21300000, guid: d8c9fb7f0caa3474b8e43f11a3329509, type: 3}
+  - {fileID: 21300000, guid: d8c9fb7f0caa3474b8e43f11a3329509, type: 3}
+  SelectNames:
+  - Castle1
+  - Castle2
+  - Castle-3
+  - Castle-Boss
+  - Swamp-1
+  - Swamp-2
+  - Swamp-3
+  - Swamp-Boss
+  - Swamp2-1
+  - Swamp2-2
+  - Swamp2-3
+  - Swamp2-Boss
+  MapPrefabs:
+  - {fileID: 1814542901282651351, guid: 9882562d5b9862c47b23e4eabeeaba5d, type: 3}
+  - {fileID: 3462451342039687285, guid: 9e89e7381a0994f4c8dcdebbe14e6673, type: 3}
+  - {fileID: 913467833939118796, guid: 4289c2a733c9a6145a4549527325fb23, type: 3}
+  - {fileID: 6998064419188645552, guid: b03b55af3c6ae6e45a80050c83cfc476, type: 3}
+  - {fileID: 952055575209137893, guid: 1b40602efafbc9848a1700124a4a196d, type: 3}
+  - {fileID: 2434951905755286918, guid: f811beb14d8a88e4194a4193b80aab7f, type: 3}
+  - {fileID: 4585826599353559938, guid: 44911a26631dce14b868a9b35da8ec90, type: 3}
+  - {fileID: 4057684294800665588, guid: e8d654bb19a6b9642a3e8242e0afb79e, type: 3}
+  - {fileID: 2158917681382754949, guid: 65d13628c5d19a749b950f50971da175, type: 3}
+  - {fileID: 7723232624028157766, guid: e2435cafdd93ecb449103296f05c1562, type: 3}
+  - {fileID: 2830272113616495334, guid: 9b1570fd6919be744a8af119981754fb, type: 3}
+  - {fileID: 7294205467680841828, guid: 20585e4e66898cc4a9d982a940ff36d2, type: 3}
+  mapSpawnPoint: {fileID: 1054294713}
+  mainCamera: {fileID: 519420031}
+  StartButton: {fileID: 505185502}
 --- !u!1 &1914237033
 GameObject:
   m_ObjectHideFlags: 0
@@ -4609,7 +4677,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 198, y: 158}
+  m_AnchoredPosition: {x: 198, y: 42.741}
   m_SizeDelta: {x: 69.5717, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1920007233
@@ -4767,9 +4835,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1962177786}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7430be97b03fedd498f959ed1e9d109d, type: 3}
+  m_Script: {fileID: 11500000, guid: 59301aacb20c0f24b9152bdf9ba3d0aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pannel: {fileID: 1350858759}
 --- !u!114 &1962177789
 MonoBehaviour:
   m_ObjectHideFlags: 0
