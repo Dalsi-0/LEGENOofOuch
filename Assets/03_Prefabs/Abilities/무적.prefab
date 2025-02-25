@@ -58,3 +58,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af5605a95589f9a4ab5b1ecf51978216, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  invincibleMat: {fileID: 2100000, guid: 7dbbcab37c6afe945aa5abcd3dce2d75, type: 2}
