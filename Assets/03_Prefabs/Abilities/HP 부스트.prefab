@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4450255073903896283}
   - component: {fileID: 747081994682014348}
-  - component: {fileID: 3432620530671271654}
   m_Layer: 0
   m_Name: "HP \uBD80\uC2A4\uD2B8"
   m_TagString: Untagged
@@ -45,16 +44,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 285db92efb892504ca858923d94deac4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  abilityBase: {fileID: 3432620530671271654}
---- !u!114 &3432620530671271654
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5588981459069910925}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4854802d6710401418f74912083d986d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  abilityBase: {fileID: 0}

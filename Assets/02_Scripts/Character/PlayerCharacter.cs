@@ -10,25 +10,6 @@ public class PlayerCharacter : BaseCharacter
     [Header("")]
     [SerializeField] PlayerClassEnum pClass;
 
-    //버프수치: 20%증가시 0.2f 입력
-    public float MaxHpBuf { get; set; }
-    public float SpeedBuf { get; set; }
-    public float AtkBuf { get; set; }
-    public float AsBuf { get; set; }
-    public float CriDmgBuf { get; set; }
-    public float CriChanceBuf { get; set; }
-
-    public override float MaxHp => base.MaxHp * (1 + MaxHpBuf);
-    public override float Speed => base.Speed * (1 + SpeedBuf);
-    public override float AttackPower => base.AttackPower * (1 + AtkBuf);
-    public override float AttackSpeed => base.AttackSpeed * (1 + AsBuf);
-    public float CriDmg => criticalDamage + CriDmgBuf;
-    public float CriChance => criticalChance + CriChanceBuf;
-
-    public bool GodMod = false;
-    public int life = 1;
-
-
     /// <summary>
     /// 키보드 입력으로 이동방향을 결정합니다.
     /// </summary>
@@ -55,35 +36,9 @@ public class PlayerCharacter : BaseCharacter
         }
     }
 
-    /// <summary>
-    /// 무적상태일 경우 체력회복만 가능합니다.
-    /// </summary>
-    /// <param name="change">변경할 수치입니다. 데미지면 음수, 회복이면 양수값을 입력합니다.</param>
-    public override void ChangeHealth(float change)
-    {
-        if (!GodMod || change > 0)
-            base.ChangeHealth(change);
-    }
-
-    /// <summary>
-    /// 죽음에 달하면 목숨이 하나 줄고, 목숨이 다하면 사망합니다.
-    /// </summary>
     protected override void Death()
     {
-        if (--life > 0)
-            return;
         //사망시 게임종료 로직 실행
         base.Death();
-    }
-
-    protected override void Attack()
-    {
-        base.Attack();
-        GameManager.Instance.ProjectileManager.ShootPlayerProjectile(this.transform.position, lookDir,pClass,0,0);
-    }
-
-    private void Start()
-    {
-        GameManager.Instance.ProjectileManager.CreateFairy(this.transform.position);
     }
 }

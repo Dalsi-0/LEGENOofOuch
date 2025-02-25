@@ -34,27 +34,21 @@ public abstract class AbilityBase : MonoBehaviour
     /// 스킬 정보 초기화
     /// </summary>
     /// <param name="abilityDataSO">스킬 정보 SO</param>
-    public virtual void Init(AbilityDataSO abilityDataSO = null)
+    public virtual void Init(AbilityDataSO abilityDataSO)
     {
-        if (abilityDataSO != null)
-        {
-            abilityData = new AbilityData(abilityDataSO.Ability,
-                abilityDataSO.AbilityName,
-                abilityDataSO.Description,
-                abilityDataSO.Rank,
-                abilityDataSO.Values
-                );
-            isUpgraded = abilityDataSO.CanUpgrade;
-        }
+        abilityData = new AbilityData(abilityDataSO.Ability,
+            abilityDataSO.AbilityName,
+            abilityDataSO.Description,
+            abilityDataSO.Rank,
+            abilityDataSO.Values
+            );
+        isUpgraded = abilityDataSO.CanUpgrade;
     }
 
-    protected virtual void UpdateAbility() { }
-
-    public virtual void UseSkill() { }
+    public abstract void UseSkill();
 
     public void UpgradeAbility()
     {
         isUpgraded = true;
-        UpdateAbility();
     }
 }

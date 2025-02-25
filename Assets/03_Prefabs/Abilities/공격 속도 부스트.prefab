@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3329943961695237733}
   - component: {fileID: 278267759942998969}
-  - component: {fileID: 5604424914953582947}
   m_Layer: 0
   m_Name: "\uACF5\uACA9 \uC18D\uB3C4 \uBD80\uC2A4\uD2B8"
   m_TagString: Untagged
@@ -45,16 +44,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 285db92efb892504ca858923d94deac4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  abilityBase: {fileID: 5604424914953582947}
---- !u!114 &5604424914953582947
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1467932123278592255}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ac1982ee886979647a7a56c1bb33b5a0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  abilityBase: {fileID: 0}

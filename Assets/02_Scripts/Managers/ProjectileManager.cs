@@ -10,7 +10,6 @@ public class ProjectileManager : MonoBehaviour
     [SerializeField] private GameObject monsterProjectilePrefab; // 몬스터별 투사체 프리팹
     [SerializeField] private GameObject fairyPrefab; // 요정 프리팹
     [SerializeField] private GameObject fireOrbPrefab; // 불의 원 프리팹
-    [SerializeField] private GameObject fairyProjectilePrefab; // 요정 프리팹
 
 
     /// <summary>
@@ -38,8 +37,8 @@ public class ProjectileManager : MonoBehaviour
         GameObject origin = monsterProjectilePrefab;
         GameObject obj = Instantiate(origin, startPosition, Quaternion.identity);
 
-        ProjectileEnemyController projectileEnemyController = obj.GetComponent<ProjectileEnemyController>();
-        projectileEnemyController.Init(direction);
+        ProjectileController projectileController = obj.GetComponent<ProjectileController>();
+        projectileController.Init(direction);
     }
 
     /// <summary>
@@ -54,8 +53,8 @@ public class ProjectileManager : MonoBehaviour
 
         SurroundController fireOrbController1 = obj1.GetComponent<SurroundController>();
         SurroundController fireOrbController2 = obj2.GetComponent<SurroundController>();
-        fireOrbController1.Init(0);
-        fireOrbController2.Init(180);
+        fireOrbController1.Init(playerPosition, 0);
+        fireOrbController2.Init(playerPosition, 180);
     }
 
     /// <summary>
@@ -68,21 +67,7 @@ public class ProjectileManager : MonoBehaviour
         GameObject obj = Instantiate (origin, playerPosition, Quaternion.identity);
 
         SurroundController fairyController = obj.GetComponent<SurroundController>();
-        fairyController.Init(270);
-    }
-
-    /// <summary>
-    /// 요정 공격
-    /// </summary>
-    /// <param name="fairyPosition">요정 위치</param>
-    /// <param name="direction">표적과 요정의 위치 뺀값</param>
-    public void ShootFairy(Vector3 fairyPosition, Vector3 direction)
-    {
-        GameObject origin = fairyProjectilePrefab;
-        GameObject obj = Instantiate(origin, fairyPosition, Quaternion.identity);
-
-        ProjectileController projectileController = obj.GetComponent<ProjectileController>();
-        projectileController.Init(direction);
+        fairyController.Init(playerPosition,270);
     }
 
 }

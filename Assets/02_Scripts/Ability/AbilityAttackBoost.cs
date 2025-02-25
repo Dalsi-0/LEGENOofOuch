@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEditor.Tilemaps;
 using UnityEngine;
 
-public class DiagonalShot : AbilityBase
+public class AbilityAttackBoost : AbilityBase
 {
     public override void Init(AbilityDataSO abilityDataSO)
     {

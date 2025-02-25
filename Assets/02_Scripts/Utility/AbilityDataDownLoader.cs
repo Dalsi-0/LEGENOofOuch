@@ -37,7 +37,7 @@ public class AbilityDataDownLoader : MonoBehaviour
     }
     private void Start()
     {
-        Invoke("SetActiveDisable", 10f);
+    //    Invoke("SetActiveDisable", 10f);
     }
     private void SetActiveDisable()
     {
@@ -71,7 +71,7 @@ public class AbilityDataDownLoader : MonoBehaviour
             Debug.LogError("데이터 가져오기 실패: " + www.error);
         }
 
-        // CreatePrefabs();
+        CreatePrefabs();
         ApplyAbilityDataSO();
     }
 
