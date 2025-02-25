@@ -135,7 +135,6 @@ GameObject:
   - component: {fileID: 15437348}
   - component: {fileID: 15437347}
   - component: {fileID: 15437346}
-  - component: {fileID: 15437349}
   m_Layer: 5
   m_Name: Start
   m_TagString: Untagged
@@ -206,31 +205,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 15437347}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 15437349}
-        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
-        m_MethodName: toglePanel
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
-        m_MethodName: toglePanel
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &15437347
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -269,23 +244,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 15437344}
   m_CullTransparentMesh: 1
---- !u!114 &15437349
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 15437344}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59301aacb20c0f24b9152bdf9ba3d0aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nextStageButton: {fileID: 0}
-  previousStageButton: {fileID: 0}
-  startUI: {fileID: 0}
-  characterUI: {fileID: 0}
-  settingUI: {fileID: 0}
 --- !u!1 &23217143
 GameObject:
   m_ObjectHideFlags: 0
@@ -657,13 +615,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c526b3d2f006a714caf12e1c2b3c6cd6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectilePrefabs:
-  - {fileID: 804185892295900235, guid: 01f7ba9df7eb2f14e99bf11894dca779, type: 3}
-  - {fileID: 8163225404172936699, guid: ec077d20af097b6458927c8d0b8d653f, type: 3}
-  - {fileID: 7749439915917620633, guid: 84d97cec66614024cb47cb2542fda977, type: 3}
-  monsterProjectilePrefab: {fileID: 7749439915917620633, guid: 85b9f64248781704085d33915f6bdc1c, type: 3}
-  fairyPrefab: {fileID: 3263711721537602184, guid: acafe74586dafdb42bd58f9c635b8c49, type: 3}
-  fireOrbPrefab: {fileID: 2372606649954919775, guid: dbb0c6311cfcf4f46a3c5f2620b904d4, type: 3}
+  projectilePrefabs: []
+  monsterProjectilePrefab: {fileID: 0}
+  fairyPrefab: {fileID: 0}
+  fireOrbPrefab: {fileID: 0}
 --- !u!1 &100994688
 GameObject:
   m_ObjectHideFlags: 0
@@ -1471,11 +1426,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8700a4f90bf13d4aabe6dde4d5693b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  monsterManager: {fileID: 1549722065}
-  test: {fileID: 934417965}
+  monsterManager: {fileID: 0}
+  test: {fileID: 0}
   playerSpawn: {fileID: 0}
   monsterSpawn: []
-  playerPrefab: {fileID: 8841419548765523558, guid: 46b22d70bcaac4e489c026e3258e9f6d, type: 3}
+  playerPrefab: {fileID: 0}
   player: {fileID: 0}
 --- !u!1 &244752638
 GameObject:
@@ -3691,9 +3646,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1350858763}
-        m_TargetAssemblyTypeName: StageManager, Assembly-CSharp
-        m_MethodName: PreviousStage
+      - m_Target: {fileID: 1313185638}
+        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+        m_MethodName: PreviousStageButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3846,7 +3801,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 240ad458078f7574ea2c166d3cab93f9, type: 3}
   stageName:
   - "\uC131"
-  - "\uB2AA\uC9C0"
+  - "\uB2AA"
   - "\uD654\uC0B0"
   textStageName: {fileID: 1272212813}
   characterPreview: {fileID: 178106438}
@@ -4550,7 +4505,6 @@ GameObject:
   - component: {fileID: 1212427183}
   - component: {fileID: 1212427182}
   - component: {fileID: 1212427184}
-  - component: {fileID: 1212427185}
   m_Layer: 5
   m_Name: CharacterUI
   m_TagString: Untagged
@@ -4672,32 +4626,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1212427185
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1212427180}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f95607c90203c024f98f44bd3f2ca48b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  imageStage: {fileID: 0}
-  stageImages: []
-  stageName: []
-  textStageName: {fileID: 0}
-  characterPreview: {fileID: 178106438}
-  characterImages:
-  - {fileID: -360105596, guid: 888a8360ca52dac41b20aa46d6e0129b, type: 3}
-  - {fileID: -97765240, guid: 880185dfdae843b41b6b35efe1fc6d34, type: 3}
-  - {fileID: -1888269442, guid: 41e36cdc274a53245bb7305f03572a1c, type: 3}
-  characterNames:
-  - Knight
-  - Archer
-  - Wizard
-  characterNameText: {fileID: 0}
 --- !u!1 &1239567887
 GameObject:
   m_ObjectHideFlags: 0
@@ -5160,7 +5088,6 @@ GameObject:
   - component: {fileID: 1350858760}
   - component: {fileID: 1350858762}
   - component: {fileID: 1350858761}
-  - component: {fileID: 1350858763}
   m_Layer: 5
   m_Name: StartUI
   m_TagString: Untagged
@@ -5230,18 +5157,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1350858759}
   m_CullTransparentMesh: 1
---- !u!114 &1350858763
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1350858759}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc3a4f347a6df944d9f541485c5d9851, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1354139989
 GameObject:
   m_ObjectHideFlags: 0
@@ -5495,7 +5410,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9cb99c8e45b6ef45aeecd511567ff4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  abilityRepositoy: {fileID: 1405865329}
+  abilityRepositoy: {fileID: 0}
   abilityParent: {fileID: 0}
 --- !u!114 &1405865329
 MonoBehaviour:
@@ -6575,8 +6490,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -60.900013, y: 26.899988}
-  m_SizeDelta: {x: 195.3388, y: 251.9757}
+  m_AnchoredPosition: {x: -68.15978, y: 17.5661}
+  m_SizeDelta: {x: 408.982, y: 233.3078}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1540192422
 MonoBehaviour:
@@ -8123,9 +8038,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1350858763}
-        m_TargetAssemblyTypeName: StageManager, Assembly-CSharp
-        m_MethodName: NextStage
+      - m_Target: {fileID: 1313185638}
+        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+        m_MethodName: NextStageButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -9152,7 +9067,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1212427185}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: CharacterManagert, Assembly-CSharp
         m_MethodName: SelectCharater
         m_Mode: 3
@@ -9467,7 +9382,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1212427185}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: CharacterManagert, Assembly-CSharp
         m_MethodName: SelectCharater
         m_Mode: 3
@@ -9713,7 +9628,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1212427185}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: CharacterManagert, Assembly-CSharp
         m_MethodName: SelectCharater
         m_Mode: 3
