@@ -310,7 +310,7 @@ GameObject:
   - component: {fileID: 2271822649697971388}
   - component: {fileID: 7392228391267861443}
   - component: {fileID: 907818331032063877}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Orc
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -351,10 +351,10 @@ MonoBehaviour:
   HpBar: {fileID: 3657336185170633128}
   maxHp: 5
   speed: 1
-  attackPower: 2
+  attackPower: 1
   attackSpeed: 1
   attackRange: 2
-  mEnum: 0
+  mEnum: 1
   potionPrefeb: {fileID: 1077902193551154372, guid: ff527ef4c0663784088eebcbfb700717, type: 3}
   potionDrop: 60
 --- !u!50 &2271822649697971388

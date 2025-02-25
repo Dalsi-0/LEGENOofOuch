@@ -8,18 +8,13 @@ public class BaseCharacter : MonoBehaviour
 {
     [SerializeField] SpriteRenderer sprite;
     AnimationHandler animHandle;
-    [SerializeField] public Transform target;
+    [SerializeField] protected Transform target;
     [SerializeField] Slider HpBar;
 
-    [Header("BaseStat")]
+    [Header("Stat")]
     [SerializeField] protected float maxHp = 100;
     [SerializeField] protected float speed = 2;
     [SerializeField] protected float attackPower = 1, attackSpeed = 1;
-
-    public virtual float MaxHp { get => maxHp; }
-    public virtual float Speed { get => speed; }
-    public virtual float AttackPower { get => attackPower; }
-    public virtual float AttackSpeed { get => attackSpeed; }
 
     float curHp;
     protected float CurHp { get => curHp; set => curHp = value <= maxHp ? (value >= 0 ? value : 0) : maxHp; }

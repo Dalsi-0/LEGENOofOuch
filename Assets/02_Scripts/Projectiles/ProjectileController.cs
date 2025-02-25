@@ -91,8 +91,6 @@ public class ProjectileController : MonoBehaviour
             {
                 if (contactEnemy < contactEnemyCount)
                 {
-                    EnemyCharacter enemey = collision.gameObject.GetComponent<EnemyCharacter>();
-                    enemey.ChangeHealth(GameManager.Instance.player.AttackPower); // 변수 바뀌면 적용
                     var contact = collision.contacts[0];
                     // 충돌 지점
                     direction = Vector3.Reflect(direction, contact.normal); // 현재 진행방향과 충돌지점을 계산해 반사각을 구해줌
@@ -100,11 +98,7 @@ public class ProjectileController : MonoBehaviour
                     contactEnemy += 1;
                 }
                 else if (contactEnemy >= contactEnemyCount)
-                {
-                    EnemyCharacter enemey = collision.gameObject.GetComponent<EnemyCharacter>();
-                    enemey.ChangeHealth(GameManager.Instance.player.AttackPower); // 변수 바뀌면 적용
                     Destroy(this.gameObject);
-                }
             }
             else { Physics2D.IgnoreLayerCollision(this.gameObject.layer, collision.gameObject.layer); } // 같은 레이어는 무시
         }

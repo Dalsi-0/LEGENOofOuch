@@ -11,10 +11,12 @@ public class EnemyCharacter : BaseCharacter
     [SerializeField] MonsterEnum mEnum;
     [SerializeField] GameObject potionPrefeb;
     [SerializeField][Range(0, 100)] float potionDrop;
+    MonsterManager MM;
 
     void Start()
     {
         target = FindAnyObjectByType(typeof(PlayerCharacter)).GameObject().transform;
+        MM = FindFirstObjectByType<MonsterManager>();
     }
 
     /// <summary>
@@ -40,13 +42,7 @@ public class EnemyCharacter : BaseCharacter
         if (Random.Range(0, 100) < potionDrop)
             Instantiate(potionPrefeb, transform.position, Quaternion.identity);
 
-        GameManager.Instance.KillMonster(this);
+        MM.RemoveEnemyOnDeath(this);
         base.Death();
-    }
-
-    protected override void Attack()
-    {
-        base.Attack();
-        GameManager.Instance.ProjectileManager.ShootEnemyProjectile(this.transform.position,lookDir);
     }
 }
