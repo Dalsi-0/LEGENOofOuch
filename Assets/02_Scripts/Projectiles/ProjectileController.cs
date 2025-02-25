@@ -8,6 +8,7 @@ public class ProjectileController : MonoBehaviour
     [SerializeField] private LayerMask layerMaskEnemy; //적 설정
     [SerializeField] private LayerMask layerMaskWall; // 벽 설정
     private Rigidbody2D rigidbody2D;
+    private Collider2D arrowCollider;
     private Vector3 direction; // 플레이어의 방향
     private int contactWall; // 벽과 충돌 횟수
     private int contactEnemy; // 적과 충돌 횟수
@@ -17,6 +18,7 @@ public class ProjectileController : MonoBehaviour
     private void Awake()
     {
         rigidbody2D = GetComponent<Rigidbody2D>();
+        arrowCollider = GetComponent<Collider2D>();
     }
 
     /// <summary>
@@ -91,14 +93,17 @@ public class ProjectileController : MonoBehaviour
             {
                 if (contactEnemy < contactEnemyCount)
                 {
-                    var contact = collision.contacts[0];
-                    // 충돌 지점
-                    direction = Vector3.Reflect(direction, contact.normal); // 현재 진행방향과 충돌지점을 계산해 반사각을 구해줌
-                    RotationRojectile();
+                    EnemyCharacter enemey = collision.gameObject.GetComponent<EnemyCharacter>();
+                    enemey.ChangeHealth(GameManager.Instance.player.AttackPower); // 변수 바뀌면 적용
+                    Physics2D.IgnoreCollision(arrowCollider, collision.collider);
                     contactEnemy += 1;
                 }
                 else if (contactEnemy >= contactEnemyCount)
+                {
+                    EnemyCharacter enemey = collision.gameObject.GetComponent<EnemyCharacter>();
+                    enemey.ChangeHealth(GameManager.Instance.player.AttackPower); // 변수 바뀌면 적용
                     Destroy(this.gameObject);
+                }
             }
             else { Physics2D.IgnoreLayerCollision(this.gameObject.layer, collision.gameObject.layer); } // 같은 레이어는 무시
         }
