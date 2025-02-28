@@ -177,6 +177,7 @@ public class GameManager : MonoBehaviour
         LevelManager.ClearPotion();
         MonsterManager.ClearSpawns();
         AbilityManager.SetMultiShotOn(false);
+        healReward = 0;
     }
 
     /// <summary>
