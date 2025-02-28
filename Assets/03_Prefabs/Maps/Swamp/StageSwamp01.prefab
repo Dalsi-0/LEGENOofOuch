@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2685753963860171958}
   - component: {fileID: 4018079270673619746}
   m_Layer: 0
-  m_Name: NavManager
+  m_Name: Swamp01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

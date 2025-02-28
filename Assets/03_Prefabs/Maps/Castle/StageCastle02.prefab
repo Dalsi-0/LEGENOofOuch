@@ -4214,7 +4214,7 @@ GameObject:
   - component: {fileID: 3174530110445823121}
   - component: {fileID: 6320353544154602835}
   m_Layer: 0
-  m_Name: NavManager
+  m_Name: Castle02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -2954,7 +2954,7 @@ GameObject:
   - component: {fileID: 7296171293677231022}
   - component: {fileID: 2010338010056581607}
   m_Layer: 0
-  m_Name: NavManager
+  m_Name: SwampBoss
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

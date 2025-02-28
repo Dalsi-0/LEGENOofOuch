@@ -2812,7 +2812,7 @@ GameObject:
   - component: {fileID: 6537903978259946304}
   - component: {fileID: 4834701787561730704}
   m_Layer: 0
-  m_Name: NavManager
+  m_Name: Volcanic01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

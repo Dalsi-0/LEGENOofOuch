@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2000892509295719323}
   - component: {fileID: 8818926409266768366}
   m_Layer: 0
-  m_Name: NavManager
+  m_Name: Castle03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

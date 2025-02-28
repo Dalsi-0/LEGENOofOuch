@@ -3921,7 +3921,7 @@ GameObject:
   - component: {fileID: 6992075558637650817}
   - component: {fileID: 8460372879090583259}
   m_Layer: 0
-  m_Name: NavManager
+  m_Name: SwampDevil
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
